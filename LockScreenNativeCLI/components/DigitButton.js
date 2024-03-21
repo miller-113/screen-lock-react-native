@@ -11,9 +11,9 @@ const styles = StyleSheet.create({
  
   digitButton: {
     margin: 5,
-        width: 60,
+    width: 60,
     height: 60,
-        justifyContent: 'center',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   digit: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   pressed: {
     backgroundColor: 'rgba(44, 50, 62, 1)',
-    borderRadius: '50%',
+    borderRadius: 50,
   },
 
  

@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-// import { Shadow, Neomorph } from 'react-native-neomorph-shadows';
 import { Neomorph } from 'react-native-neomorph-shadows'
     
 
