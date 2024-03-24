@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Svg, { Polygon } from 'react-native-svg';
+import { Neomorph, Shadow } from 'react-native-neomorph-shadows';
+
 import DigitButton from './components/DigitButton';
 import Dots from './components/Dots';
-
+import NeomorphismButton from './components/NeomorphismButton';
 
 const LockScreen = () => {
   const [password, setPassword] = useState('');
@@ -42,6 +45,71 @@ const LockScreen = () => {
 
   return (
     <View style={styles.lockScreen}>
+      
+      
+{/* <Neomorph
+  darkShadowColor="black" // <- set this
+  lightShadowColor="white" // <- this
+  style={{
+    shadowOpacity: .7, // <- and this or yours opacity
+    shadowRadius: 2,
+
+    backgroundColor: 'green',
+    width: 60,
+    height: 40,
+  }}
+>
+ 
+</Neomorph>
+      
+  <View style={{ alignItems: 'center' }}>
+      <Svg height="40" width="60">
+        <Polygon
+          points="20,0 200,0 200,200 180,200 0,20"
+          fill="blue"
+        />
+      </Svg>
+      <View style={{ position: 'absolute', top: 3, left: 20, width: 40, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ color: 'white', textAlign: 'center', fontSize: 26, fontWeight: '600' }}>x</Text>
+      </View>
+    </View>
+         */}
+        
+        
+        
+        <NeomorphismButton/>
+        
+{/*         
+<Neomorph
+  darkShadowColor="black"
+  lightShadowColor="white"
+  style={{
+    shadowOpacity: 1,
+    shadowRadius: 10,
+    backgroundColor: 'transparent', // Прозрачный фон
+    width: 60,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 5, // Добавлено elevation
+  }}
+>
+  <Svg height="40" width="60">
+    <Polygon
+      points="20,0 200,0 200,200 180,200 0,20"
+      fill="rgba(35, 39, 49, 1)"
+    />
+  </Svg>
+  <View style={{ position: 'absolute', top: 3, left: 20, width: 40, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ color: 'white', textAlign: 'center', fontSize: 26, fontWeight: '600' }}>x</Text>
+  </View>
+</Neomorph> */}
+
+        
+        
+        
+        
+        
       <Text style={styles.title}>Введите пароль</Text>
       <Dots dots={dots}></Dots>
       <View style={styles.digitsContainer}>

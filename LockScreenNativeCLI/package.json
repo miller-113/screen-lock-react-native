@@ -13,7 +13,9 @@
     "@react-native-community/art": "^1.2.0",
     "react": "18.2.0",
     "react-native": "0.73.6",
-    "react-native-neomorph-shadows": "^1.1.2"
+    "react-native-inset-shadow": "^1.0.3",
+    "react-native-neomorph-shadows": "^1.1.2",
+    "react-native-svg": "^15.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
