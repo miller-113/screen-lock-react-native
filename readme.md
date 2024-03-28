@@ -1,5 +1,6 @@
 # LockScreen
-<img style="height: 400px" src="https://github.com/miller-113/screen-lock-react-native/blob/main/LockScreenProject/assets/Screenshot%202024-03-19%20at%2018.41.08.png" alt="screenshot screen lock">
+
+<img style="height: 400px" src="https://raw.githubusercontent.com/miller-113/screen-lock-react-native/expo/LockScreenProject/assets/Screenshot%202024-03-19%20at%2018.41.08.png" alt="screenshot screen lock">
 
 This project is a mobile screen lock application.
 
@@ -8,21 +9,21 @@ This project is a mobile screen lock application.
 1. Make sure you have [Node.js](https://nodejs.org/) and npm installed.
 2. Clone the project repository:
 
-    ```bash
-    git clone <repository URL>
-    ```
+   ```bash
+   git clone <repository URL>
+   ```
 
 3. Navigate to the project directory:
 
-    ```bash
-    cd LockScreen
-    ```
+   ```bash
+   cd LockScreen
+   ```
 
 4. Install project dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ## Usage
 
@@ -30,21 +31,21 @@ After installing the dependencies, you can run the project:
 
 - Run on Android device:
 
-    ```bash
-    npm run android
-    ```
+  ```bash
+  npm run android
+  ```
 
 - Run on iOS device:
 
-    ```bash
-    npm run ios
-    ```
+  ```bash
+  npm run ios
+  ```
 
 - Run in web browser:
 
-    ```bash
-    npm run web
-    ```
+  ```bash
+  npm run web
+  ```
 
 ## Project Structure
 
