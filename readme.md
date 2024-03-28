@@ -1,5 +1,5 @@
 # LockScreen
-<img style="height: 400px" src="https://github.com/miller-113/screen-lock-react-native/blob/main/LockScreenProject/assets/Screenshot%202024-03-19%20at%2018.41.08.png" alt="screenshot screen lock">
+<img style="height: 400px" src="https://raw.githubusercontent.com/miller-113/screen-lock-react-native/expo/LockScreenProject/assets/Screenshot%202024-03-19%20at%2018.41.08.png" alt="screenshot screen lock">
 
 This project is a mobile screen lock application.
 
