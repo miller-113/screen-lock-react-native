@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Svg, { Polygon } from 'react-native-svg';
-import { Neomorph, Shadow } from 'react-native-neomorph-shadows';
+import {View, Text, StyleSheet} from 'react-native';
 
 import DigitButton from './components/DigitButton';
 import Dots from './components/Dots';
@@ -9,14 +7,14 @@ import NeomorphismButton from './components/NeomorphismButton';
 
 const LockScreen = () => {
   const [password, setPassword] = useState('');
-  const [showClickedImage, setShowClickedImage] = useState(false);
+  const [pressedButtons, setPressedButtons] = useState({});
+
   const [dots, setDots] = useState([
     'disable',
     'disable',
     'disable',
     'disable',
   ]);
-  const [pressedButtons, setPressedButtons] = useState({});
 
   const handleDigitPress = digit => {
     if (password.length < 4) {
@@ -28,88 +26,16 @@ const LockScreen = () => {
     setPressedButtons({...pressedButtons, [digit]: true});
     setTimeout(() => setPressedButtons({}), 300);
   };
-
-  const handleClearPress = () => {
-    setShowClickedImage(true);
-    setTimeout(() => setShowClickedImage(false), 1000);
-    
+  const handleClearPress = () => {    
     if (password.length > 0) {
       setPassword(password.slice(0, -1));
       const updatedDots = [...dots];
       updatedDots[password.length - 1] = 'disable';
       setDots(updatedDots);
-      
-
     }
   };
-
   return (
     <View style={styles.lockScreen}>
-      
-      
-{/* <Neomorph
-  darkShadowColor="black" // <- set this
-  lightShadowColor="white" // <- this
-  style={{
-    shadowOpacity: .7, // <- and this or yours opacity
-    shadowRadius: 2,
-
-    backgroundColor: 'green',
-    width: 60,
-    height: 40,
-  }}
->
- 
-</Neomorph>
-      
-  <View style={{ alignItems: 'center' }}>
-      <Svg height="40" width="60">
-        <Polygon
-          points="20,0 200,0 200,200 180,200 0,20"
-          fill="blue"
-        />
-      </Svg>
-      <View style={{ position: 'absolute', top: 3, left: 20, width: 40, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ color: 'white', textAlign: 'center', fontSize: 26, fontWeight: '600' }}>x</Text>
-      </View>
-    </View>
-         */}
-        
-        
-        
-        <NeomorphismButton/>
-        
-{/*         
-<Neomorph
-  darkShadowColor="black"
-  lightShadowColor="white"
-  style={{
-    shadowOpacity: 1,
-    shadowRadius: 10,
-    backgroundColor: 'transparent', // Прозрачный фон
-    width: 60,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    elevation: 5, // Добавлено elevation
-  }}
->
-  <Svg height="40" width="60">
-    <Polygon
-      points="20,0 200,0 200,200 180,200 0,20"
-      fill="rgba(35, 39, 49, 1)"
-    />
-  </Svg>
-  <View style={{ position: 'absolute', top: 3, left: 20, width: 40, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-    <Text style={{ color: 'white', textAlign: 'center', fontSize: 26, fontWeight: '600' }}>x</Text>
-  </View>
-</Neomorph> */}
-
-        
-        
-        
-        
-        
       <Text style={styles.title}>Введите пароль</Text>
       <Dots dots={dots}></Dots>
       <View style={styles.digitsContainer}>
@@ -164,20 +90,15 @@ const LockScreen = () => {
             pressed={pressedButtons[9]}
           />
                 
-          <TouchableOpacity
-            style={[styles.clearButton]}
-            onPress={handleClearPress}>
-            {!showClickedImage && (
-              <Image source={require('./assets/Group37.png')} />
-            )}
-            {showClickedImage && (
-              <Image style={{position: 'relative', top: -11, left: -11}} source={require('./assets/Group37clicked.png')} />
-            )}
-          </TouchableOpacity>
+          <View
+
+            style={[styles.clearButton]}>
+            <NeomorphismButton onClick={handleClearPress}/>        
+          </View>
+          
         </View>
         <View style={[styles.row, {justifyContent: 'center'}]}>
           <DigitButton
-          
             digit={0}
             onPress={handleDigitPress}
             pressed={pressedButtons[0]}
@@ -213,8 +134,8 @@ const styles = StyleSheet.create({
   },
   clearButton: {
     position: 'absolute',
-    bottom: -85,
-    right: 10,
+    bottom: -75,
+    right: 20,
     width: 'auto',
   },
 
